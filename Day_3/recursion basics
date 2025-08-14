@@ -1,0 +1,62 @@
+#print n to 1
+def recursion(n):
+    if n==0:
+        return
+    print(n)
+    recursion(n-1)
+n=7
+recursion(n)
+
+#print 1 to n
+def recursion(n):
+    if n!=0:
+        recursion(n-1)
+        print(n)
+recursion(5)
+
+
+# without backtracking
+def recursion(index,n):
+    if index == n+1:
+        return
+    print(index)
+    recursion(index+1,n)
+recursion(1,5)
+
+
+#odd and even from n to 1
+def rec(n):
+    if n == 0:
+        return
+    if n % 2 == 0:
+        print(n)
+    rec(n - 1)
+n = 7
+rec(n)
+
+
+#odd and even from 1 to n
+def rec(n):
+    if n > 10:
+        return
+    if n % 2 != 0:
+        print(n)
+    rec(n + 1)
+n = 1
+rec(n)
+
+#factorial
+def factorial(n):
+    if n == 1:
+        return 1
+    return n*factorial(n-1)
+r = factorial(5)
+print(r)
+
+#factorial sum of range
+def factorial(n):
+    if n == 1:
+        return 1
+    return n+factorial(n-1)
+r = factorial(5)
+print(r)
